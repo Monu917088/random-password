@@ -1,0 +1,239 @@
+ *,
+ *::before,
+ *::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+ }
+ body{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 0%, rgba(238, 130, 238, 1) 80%);
+ 
+ }
+
+ .container{
+    width: 90%;
+    max-width: 450px;
+   
+ }
+
+ h1{
+    color:white;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: center;
+line-height: 1.2;
+ }
+
+ .display-container{
+    position: relative;
+    background-color: darkviolet;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid violet;
+    margin:1rem 0;
+    padding-top: 0.5rem;
+ }
+
+ .display{
+     width:100%;
+     background-color: transparent;
+     color: yellowgreen;
+     font-weight: 600;
+     font-size: 1.5rem;
+     line-height: 30px;
+     letter-spacing: 1px;
+     padding-right: 3.25rem;
+     padding: .4rem;
+     border:none
+ }
+
+ .display::placeholder{
+    position: absolute;
+    top:40%;
+    left:1.5rem;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: yellow;
+    opacity: 0.65;
+    text-transform: uppercase;
+ }
+
+ .display-container button{
+    position: absolute;
+    top: 50%;
+    right:1.5rem;
+    transform: translateY(-50%);
+ }
+
+ .input-container{
+    width:100%;
+    background-color: darkviolet;
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid violet;
+
+ }
+ 
+ .length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+
+ .length-container p:nth-child(1){
+    color: white;
+    font-size:1.5rem;
+ }
+
+ .length-container p:nth-child(2){
+    color: yellow;
+    font-size:1.5rem;
+ }
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom:2rem ;
+}
+
+.strength-container p{
+    color: white;
+    font-size:1.5rem;
+
+}
+
+.indicator{
+    width:1.5rem;
+    height:1.5rem ;
+    border-radius: 50%;
+
+}
+
+.generateButton{
+    width: 100% ;
+    padding: 1rem 0;
+    background-color: darkviolet;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid yellowgreen;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellowgreen;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+
+.check{
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+    gap: 0 1rem;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border:1px solid cyan;
+    cursor:pointer;
+    position: relative;
+    border-radius:0.35rem
+
+}
+
+.check input:checked{
+    background-color: cyan;
+}
+
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    color:black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left:25%;
+    top:-0.2rem;
+    
+}
+
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing:1px ;
+}
+
+.slider{
+     appearance: none;
+     width:100%;
+     position: relative;
+     cursor: pointer;
+     
+     border-radius: 1rem;
+     margin-top:2rem;
+     margin: 1.5rem;
+     height: 0.75rem;
+     background-repeat: no-repeat;
+     border: none;
+     outline: none;
+     background:linear-gradient( rgba(163, 3, 163, 1) , rgba(163, 3, 163, 1) );
+}
+
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+
+
+}
+
+
+.slider:focus{
+    outline:3px solid yellowgreen;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline:2px solid yellowgreen;
+    background-color: darkviolet;
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+}
+
+.copyBtn{
+    background: transparent;
+    border:none;
+}
+
+.tool-tip{
+    background-color: aqua;
+    position: absolute;
+    font-size:1.25rem;
+    top:-35px;
+    left:-25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+ .tool-tip.active{
+    opacity: 1;
+    transform: scale(1);
+ }
